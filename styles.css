@@ -1,0 +1,1316 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1F0044;
+    color: #FFFFFF;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+/* Navigation Styles */
+.navbar {
+    background-color: #1F0044;
+    padding: 25px 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.nav-logo h1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #EC45D8;
+    background-color: rgba(236, 69, 216, 0.1);
+}
+
+.nav-link.active {
+    color: #EC45D8;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #FFFFFF;
+    margin: 4px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* Main Content */
+.main-content {
+    margin-top: 80px;
+    min-height: calc(100vh - 80px);
+}
+
+.page {
+    display: none;
+    padding: 60px 0;
+    min-height: calc(100vh - 140px);
+}
+
+.page.active {
+    display: block;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 48px;
+    line-height: 1.5em;
+    color: #FFFFFF;
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 1.5em;
+    color: #FFFFFF;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 53px;
+    border: none;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+    height: 64px;
+    /* position: relative; */    /* ให้ปุ่มมี stacking context ของตัวเอง */
+    /*z-index: 2;*/             /* ดันปุ่มขึ้นมาเหนือเลเยอร์อื่นที่ทับอยู่ */
+}
+
+.btn-pink {
+    background-color: #EC45D8;
+    color: #FDECFB;
+}
+
+.btn-pink:hover {
+    background-color: #FDECFB;
+    color: #EC45D8;
+    border: 4px solid #EC45D8;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(236, 69, 216, 0.3);
+}
+
+.btn-blue {
+    background-color: #0BBEE7;
+    color: #E9FAFE;
+}
+
+.btn-blue:hover {
+    background-color: #E9FAFE;
+    color: #0BBEE7;
+    border: 4px solid #0BBEE7;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(11, 190, 231, 0.3);
+}
+
+.btn-purple {
+    background-color: #B672FE;
+    color: #F5ECFF;
+}
+
+.btn-purple:hover {
+    background-color: #F5ECFF;
+    color: #B672FE;
+    border: 4px solid #B672FE;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(182, 114, 254, 0.3);
+}
+
+.btn-white {
+    background-color: #FFFFFF;
+    color: #1F0044;
+}
+
+.btn-white:hover {
+    background-color: #1F0044;
+    color: #FFFFFF;
+    border: 3px solid #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+/* --- Hover Fix: ensure buttons can receive pointer events --- */
+.btn {
+  pointer-events: auto;  /* บังคับให้ทุกปุ่มรับ hover/click ได้ */
+}
+
+/* ให้ hover ทำงานเฉพาะอุปกรณ์ที่รองรับ hover (desktop/mouse) */
+@media (hover: hover) and (pointer: fine) {
+  .btn { pointer-events: auto; }
+}
+
+/* Home Page Styles */
+.dataset-overview {
+    margin-bottom: 60px;
+}
+
+.overview-content {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    padding-bottom: 60px;
+}
+
+.overview-image {
+    flex: 1;
+    position: relative;
+}
+
+.overview-image img {
+    width: 100%;
+    height: 778px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    text-align: center;
+    background: rgba(31, 0, 68, 0.8);
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.overview-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.overview-text h2 {
+    font-size: 54px;
+    margin-bottom: 30px;
+}
+
+.key-features {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.key-features h2 {
+    margin-bottom: 30px;
+}
+
+.key-features p {
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.key-features .btn {
+    align-self: flex-end;
+}
+
+.highlight {
+    color: #B672FE;
+}
+
+/* Dataset Columns */
+.dataset-columns {
+    margin-bottom: 60px;
+    padding-bottom: 80px;
+}
+
+.columns-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 31px;
+}
+
+.column-card {
+    background-color: #B672FE;
+    padding: 32px 36px 19px;
+    border-radius: 30px;
+    height: 128px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.column-card:hover {
+    background-color: #A654FE;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(182, 114, 254, 0.3);
+}
+
+.column-card.special {
+    background-color: #EC45D8;
+}
+
+.column-card.special:hover {
+    background-color: #E81BCF;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(236, 69, 216, 0.3);
+}
+
+
+.column-card h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.column-card p {
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Sleep Disorder Details */
+.sleep-disorder-details {
+    margin-top: 60px;
+    padding-bottom: 80px;
+}
+
+.sleep-disorder-details p {
+    line-height: 1.8;
+}
+
+.disorder-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.disorder-list li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.disorder-list li::before {
+    content: "•";
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.disorder-list li strong {
+    color: #FFFFFF;
+}
+
+/* Comments Section */
+.comments-section {
+    margin-top: 60px;
+    padding: 60px 0 80px;
+}
+
+.comments-section h2 {
+    margin-bottom: 20px;
+}
+
+.comments-section > p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #E5CDFF;
+}
+
+.comment-form {
+    background-color: #37146E;
+    border-radius: 30px;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #FDECFB;
+    margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #E5CDFF;
+    color: #1F0044;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(31, 0, 68, 0.5);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(236, 69, 216, 0.3);
+    background-color: #F5ECFF;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-comment-btn {
+    margin-top: 10px;
+}
+
+.comments-list {
+    background-color: #37146E;
+    border-radius: 30px;
+    padding: 40px;
+}
+
+.comments-list h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #FDECFB;
+}
+
+.no-comments {
+    text-align: center;
+    color: #B672FE;
+    font-size: 16px;
+    padding: 40px 20px;
+}
+
+.comment-item {
+    background-color: rgba(229, 205, 255, 0.1);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-left: 4px solid #EC45D8;
+    transition: all 0.3s ease;
+}
+
+.comment-item:hover {
+    background-color: rgba(229, 205, 255, 0.15);
+    transform: translateX(5px);
+}
+
+.comment-item:last-child {
+    margin-bottom: 0;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.comment-author {
+    font-size: 18px;
+    font-weight: 600;
+    color: #FDECFB;
+}
+
+.comment-date {
+    font-size: 14px;
+    color: #B672FE;
+}
+
+.comment-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #FFFFFF;
+    word-wrap: break-word;
+}
+
+/* Data Explorer Page */
+.data-explorer-content {
+    margin-top: 40px;
+    display: flex;
+    gap: 12px;
+    position: relative;
+    min-height: 950px; 
+    padding-bottom: 40px;
+}
+
+.data-frame {
+    flex: 1;
+    background-color: #37146E;
+    border-radius: 30px;
+    padding: 20px;
+    height: 860px;
+    overflow: hidden;
+}
+
+.data-display {
+    background-color: #37146E;
+    border-radius: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 18px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.data-table-container {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 0px 20px 20px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    min-width: 1400px;
+    white-space: nowrap;
+}
+
+.data-table thead {
+    position: sticky;
+    top: 0;
+    background-color: #4A1A7F;
+    z-index: 10;
+}
+
+.data-table th {
+    padding: 15px 20px;
+    text-align: left;
+    font-weight: 600;
+    color: #FDECFB;
+    border-bottom: 2px solid #B672FE;
+    white-space: nowrap;
+    position: relative;
+    min-width: 120px;
+}
+
+/* เส้นกั้นแนวตั้งระหว่างคอลัมน์ */
+.data-table th,
+.data-table td {
+    border-right: 1px solid rgba(229, 205, 255, 0.15); 
+}
+
+.data-table th:last-child,
+.data-table td:last-child {
+    border-right: none;
+}
+
+/* Header Sort และ Filter */
+.table-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.data-table th .table-header { 
+    position: relative; 
+}
+
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.header-title {
+    flex: 1;
+    font-weight: 600;
+    padding-right: 48px;
+}
+
+/* Sort Buttons */
+.sort-buttons {
+    position: absolute;          
+    top: 6px;                    
+    right: 8px;
+    display: flex;
+    gap: 4px;
+}
+
+.sort-btn {
+    background: rgba(182, 114, 254, 0.3);
+    border: 1px solid #B672FE;
+    color: #FFFFFF;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 11px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.sort-btn:hover {
+    background: #B672FE;
+    transform: scale(1.05);
+}
+
+.sort-btn.active {
+    background: #EC45D8;
+    border-color: #EC45D8;
+    font-weight: 600;
+}
+
+/* Filter Dropdown */
+.filter-container {
+    position: relative;
+}
+
+.data-table th .filter-container { 
+    margin-top: 6px; 
+}
+
+
+.filter-select {
+    background-color: rgba(229, 205, 255, 0.2);
+    color: #FFFFFF;
+    border: 1px solid #B672FE;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    width: 100%;
+    min-width: 100px;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: #EC45D8;
+    box-shadow: 0 0 0 2px rgba(236, 69, 216, 0.2);
+}
+
+.filter-select option {
+    background-color: #2A0854;
+    color: #FFFFFF;
+    padding: 8px;
+}
+
+/* === Data Explorer: spacing fix for header title vs sort buttons (override) === */
+#data-explorer .data-table th {
+  /* เพิ่มเนื้อที่แนวตั้งของหัวคอลัมน์เล็กน้อย */
+  padding-top: 22px;          
+  padding-bottom: 12px;   
+}
+
+#data-explorer .data-table th .header-title {
+  /* กันพื้นที่ด้านขวาให้ปุ่ม sort ไม่ทับตัวอักษร */
+  padding-right: 85px;       
+  line-height: 1.6;          
+  white-space: nowrap;      
+}
+
+#data-explorer .data-table th .sort-buttons {
+  /* ขยับตำแหน่งปุ่มเล็กน้อยให้ลงตัวกับ padding ใหม่ */
+  top: 6px;                   
+  right: 12px;               
+  gap: 4px;                   
+}
+
+#data-explorer .data-table th .sort-btn {
+  padding: 3px 7px;          
+  font-size: 12px;           
+}
+
+@media (max-width: 1200px) {
+  #data-explorer .data-table th .header-title {
+    padding-right: 80px;     
+  }
+}
+
+/* Table Body */
+.data-table td {
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(182, 114, 254, 0.2);
+    color: #FFFFFF;
+    font-size: 13px;
+}
+
+.data-table tbody tr:hover {
+    background-color: rgba(182, 114, 254, 0.15);
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Scrollbar */
+.data-table-container::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.data-table-container::-webkit-scrollbar-track {
+    background: #2A0854;
+    border-radius: 5px;
+}
+
+.data-table-container::-webkit-scrollbar-thumb {
+    background: #B672FE;
+    border-radius: 5px;
+}
+
+.data-table-container::-webkit-scrollbar-thumb:hover {
+    background: #EC45D8;
+}
+
+.data-table-container::-webkit-scrollbar-corner {
+    background: #2A0854;
+}
+
+/* ตัวกรอบที่ครอบตาราง: เป็นผู้รับสกรอลล์ซ้าย–ขวา */
+#data-explorer .data-table-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;    /* เลื่อนซ้าย–ขวาในกรอบ */
+  overflow-y: auto;    /* เลื่อนบน–ล่างในกรอบ (คงเดิมถ้ามีอยู่แล้ว) */
+}
+
+/* ทำให้คอลัมน์ต่อยาวออกไป จนต้องเลื่อนในกรอบ (ไม่ดัน layout นอกกรอบ) */
+#data-explorer .data-table {
+  white-space: nowrap;     /* ห้ามตัดบรรทัดในเซลล์ */
+  min-width: 1400px;       /* หรือค่าที่คุณใช้เดิม เช่น 1600px เพื่อ “เท่าเดิม” */
+  table-layout: auto;      /* ถ้าเคยตั้ง fixed แล้วทำให้ตัด ให้ปล่อย auto */
+}
+
+/* ป้องกันหน้าใหญ่ทั้งหน้าเกิดสกรอลล์แนวนอน (ไม่เกี่ยวกับการตัดใน section) */
+body {
+  overflow-x: hidden;
+}
+
+/* Loading State */
+.loading-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 18px;
+    color: #B672FE;
+}
+
+/* Row count info */
+.row-count {
+    padding: 10px 20px;
+    background-color: rgba(182, 114, 254, 0.1);
+    border-bottom: 1px solid rgba(182, 114, 254, 0.3);
+    font-size: 13px;
+    color: #E5CDFF;
+    text-align: right;
+}
+
+.summary-section {
+    background-color: #37146E;
+    border-radius: 30px;
+    padding: 20px 23px 20px 33px;
+    width: 424px;
+    height: 860px;
+    position: relative;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.summary-header h3 {
+    font-size: 36px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.statistics-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 40px;
+    width: 315px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: space-between;
+}
+
+.stat-item .btn {
+    width: 167px;
+    height: 58px;
+    padding: 17px 66px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-value {
+    background-color: #F9C2F2;
+    color: #37146E;
+    padding: 11px 34px;
+    border-radius: 30px;
+    font-size: 24px;
+    font-weight: 500;
+    min-width: 119px;
+    text-align: center;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Summary controls (Data Explorer) */
+.summary-section .summary-controls {
+  width: 100%;
+  margin: -10px 0 14px 0;
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.summary-section .summary-select {
+  background-color: #E5CDFF;
+  color: #1F0044;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 18px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  height: 45px;
+  min-width: 190px;
+  margin-bottom: 27px;
+}
+
+.summary-section .summary-select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(236, 69, 216, 0.3);
+}
+
+/* ปรับขนาดปุ่ม Calculate สีม่วงเฉพาะใน summary */
+.summary-section .btn-purple {
+  font-size: 20px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+/* Disable only on Data Explorer */
+#data-explorer .statistics-grid .btn-blue {
+  pointer-events: auto;
+}
+
+.reset-button-container {
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+}
+
+.reset-button-container .btn,
+.btn-white {
+    width: 123px;
+    height: 48px;
+    padding: 17px 0px;
+    font-size: 20px; 
+}
+
+/* Dashboard Page */
+.dashboard-content {
+    margin-top: 40px;
+}
+
+.dashboard-placeholder {
+    background-color: #37146E;
+    border-radius: 30px;
+    height: 864px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+/* Power BI embed frame */
+.pbi-frame-wrap {
+    background-color: #37146E;
+    border-radius: 30px;
+    height: 864px;         /* ให้เท่ากับของเดิม */
+    overflow: hidden;
+}
+
+/* iframe ให้กินพื้นที่เต็มกรอบ */
+.pbi-frame-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 30px;
+    display: block;
+}
+
+/* Charts Page */
+.charts-content {
+    margin-top: 40px;
+}
+
+.chart-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 28px;
+}
+
+.chart-buttons .btn {
+    flex: 1;
+    max-width: 668px;
+}
+
+.chart-buttons .btn[data-mode="visualize"] {
+    background-color: #EC45D8;
+    color: #FDECFB;
+}
+
+.chart-buttons .btn[data-mode="correlation"] {
+    background-color: #0BBEE7;
+    color: #E9FAFE;
+}
+
+.chart-buttons .btn[data-mode="visualize"]:hover {
+    background-color: #FDECFB;
+    color: #EC45D8;
+    border: 4px solid #EC45D8;
+}
+
+.chart-buttons .btn[data-mode="correlation"]:hover {
+    background-color: #E9FAFE;
+    color: #0BBEE7;
+    border: 4px solid #0BBEE7;
+}
+
+.chart-controls {
+    background-color: #37146E;
+    border-radius: 30px;
+    padding: 27px 50px;
+    margin-bottom: 30px;
+    display: none;
+    align-items: flex-end;
+    gap: 15px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.chart-controls.active {
+    display: flex;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 244px;
+}
+
+.control-group label {
+    font-size: 20px;
+    font-weight: 600;
+    color: #FDECFB;
+}
+
+.chart-select {
+    background-color: #E5CDFF;
+    color: #1F0044;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    min-height: 48px;
+    width: 100%;
+}
+
+.chart-select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(236, 69, 216, 0.3);
+}
+
+.generate-btn {
+    position: absolute;
+    right: 27px;
+    bottom: 27px;
+    width: 264px;
+    height: 48px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chart-display {
+    background-color: #37146E;
+    border-radius: 30px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+/* Download Page */
+.download-content {
+    margin-top: 40px;
+}
+
+.download-card {
+    background-color: #37146E;
+    border-radius: 30px;
+    padding: 60px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.download-card h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.download-card p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.download-btn {
+    font-size: 18px;
+    padding: 20px 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 40px;
+    }
+    
+    .dataset-overview {
+        flex-direction: column;
+    }
+    
+    .overview-content {
+        flex-direction: column;
+    }
+    
+    .data-explorer-content {
+        flex-direction: column;
+    }
+    
+    .summary-section {
+        width: 100%;
+        height: auto;
+    }
+    
+    .statistics-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+    
+    .reset-button-container {
+        position: static;
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .navbar {
+        padding: 15px 20px;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: #1F0044;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 20px 0;
+        gap: 20px;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    h2 {
+        font-size: 36px;
+    }
+    
+    .overview-text h2 {
+        font-size: 42px;
+    }
+    
+    .columns-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .column-card {
+        padding: 24px 28px;
+        height: auto;
+        min-height: 100px;
+    }
+    
+    .statistics-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .stat-item {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .chart-buttons {
+        flex-direction: column;
+    }
+    
+    .chart-controls {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px 30px;
+    }
+    
+    .control-group {
+        min-width: auto;
+    }
+    
+    .generate-btn {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+        white-space: nowrap;
+    }
+    
+    .btn {
+        padding: 12px 30px;
+        font-size: 16px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    .overview-text h2 {
+        font-size: 32px;
+    }
+    
+    .statistics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .chart-buttons .btn {
+        width: 100%;
+    }
+    
+    .column-card {
+        padding: 20px 24px;
+    }
+    
+    .summary-section {
+        padding: 30px 20px;
+    }
+    
+    .chart-controls {
+        padding: 15px 20px;
+    }
+    
+    .data-frame {
+        height: 400px;
+    }
+    
+    .stat-item .btn {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+/* Animation and Transitions */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page.active {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.column-card {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.column-card:nth-child(even) {
+    animation-delay: 0.1s;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1F0044;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #EC45D8;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #E81BCF;
+}
+
+/* Focus Styles for Accessibility */
+.btn:focus,
+.nav-link:focus,
+.chart-select:focus {
+    outline: 3px solid #EC45D8;
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .hamburger {
+        display: none;
+    }
+    
+    .main-content {
+        margin-top: 0;
+    }
+    
+    .page {
+        display: block !important;
+        page-break-inside: avoid;
+    }
+}
