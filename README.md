@@ -94,13 +94,11 @@ The dataset enables:
 
 ## 🛠 Technologies Used
 
-- 📊 [Microsoft Excel](https://www.microsoft.com/en/microsoft-365/excel) – Data preprocessing and cleaning  
-- 🌐 [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) – Structure  
-- 🎨 [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) – Styling  
-- ⚡ [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Interactivity  
-- 🎨 [Figma](https://www.figma.com/) – UI/UX Design  
-- 📈 [Power BI](https://powerbi.microsoft.com/) – Dashboard visualization  
-- 🚀 [Netlify](https://www.netlify.com/) – Deployment platform  
+- 📊 [Microsoft Excel](https://1drv.ms/x/c/d9fd878c81c467a8/EaHZoXrf-_dBu5CuCDUd7FABeJuEw0wCcfz2xnwqXhp30A?e=eLAQIt) – Data preprocessing and cleaning  
+- 🌐 [Web] – Structure   
+- 🎨 [Figma](https://www.figma.com/design/Lodrx2FXTsYhwdZiMrt7Y5/Data-Analysis?node-id=0-1&p=f) – UI/UX Design  
+- 📈 [Power BI] – Dashboard visualization  
+- 🚀 [Netlify] – Deployment platform  
 
 ---
 
