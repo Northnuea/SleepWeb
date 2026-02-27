@@ -18,26 +18,10 @@ The goal is to transform raw sleep data into meaningful insights using interacti
 
 ---
 
-
 ### 📊 Dataset 
-https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset
+https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset 
 
-### 🧾 Key Features (Columns)
-
-| Feature | Description |
-|----------|-------------|
-| Age | Age of individual |
-| Gender | Male / Female |
-| Occupation | Job category |
-| Sleep Duration | Average hours of sleep per night |
-| Sleep Quality | Sleep quality score (1–10) |
-| Physical Activity Level | Activity intensity score |
-| Stress Level | Self-reported stress score |
-| BMI Category | Underweight / Normal / Overweight / Obese |
-| Heart Rate | Resting heart rate |
-| Systolic BP | Systolic blood pressure |
-| Diastolic BP | Diastolic blood pressure |
-| Sleep Disorder | None / Insomnia / Sleep Apnea |
+---
 
 ### 🎯 Dataset Purpose
 The dataset enables:
