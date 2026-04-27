@@ -1,4 +1,4 @@
-[Cloud (1).pdf](https://github.com/user-attachments/files/27129875/Cloud.1.pdf)# 💤 Sleepsense  
+# 💤 Sleepsense  
 🌐 Live Demo: https://sleepsense.netlify.app/
 
 ---
