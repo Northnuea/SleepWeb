@@ -1,4 +1,4 @@
-# 💤 Sleepsense  
+[Cloud (1).pdf](https://github.com/user-attachments/files/27129875/Cloud.1.pdf)# 💤 Sleepsense  
 🌐 Live Demo: https://sleepsense.netlify.app/
 
 ---
@@ -36,6 +36,10 @@ The dataset enables:
 - Identify correlations between lifestyle and sleep quality
 - Visualize trends using dashboard components
 - Support data-driven health insights
+
+---
+## ☁️ Cloud Architecture
+<img width="675" height="305" alt="image" src="https://github.com/user-attachments/assets/e8e1a0e5-6da8-4674-a21c-4c593c4b993a" />
 
 ---
 
